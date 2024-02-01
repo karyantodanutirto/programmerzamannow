@@ -7,13 +7,15 @@
     <title>Form Submit </title>
 </head>
 <body>
+<h1>Register Name</h1>
     <form action="/form" method="post">
-        <label for="name">
+        <label for="name"  ><b>Name</b>
             <input type="text" name="name" >
         </label>
             <input type="submit" value="Submit">
             @csrf
             {{-- <input type="hiden" name="_token" value="{{csrf_token()}}"> --}}
     </form>
+
 </body>
 </html>

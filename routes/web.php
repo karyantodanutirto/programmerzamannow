@@ -23,8 +23,9 @@ Route::get('/', function () {
 });
 
 Route::get('/form', [FormController::class, 'form']);
-Route::post('/form', [FormController::class, 'submitForm' ]);
-
+Route::post('/form', [FormController::class, 'submitForm', 'hello']);
+// Route::post('/form', [FormController::class, 'submitForm', 'hello->$name']);
+// Route::post('/hello', [FormController::class, 'hello',]);
 
 Route::get("/home",[HomeController::class,"index"]);
 
