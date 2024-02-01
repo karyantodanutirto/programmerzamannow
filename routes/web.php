@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/form', [FormController::class, 'form']);
+Route::post('/form', [FormController::class, 'submitForm' ]);
+
+
 Route::get("/home",[HomeController::class,"index"]);
 
 Route::fallback(function(){
@@ -30,6 +34,4 @@ Route::fallback(function(){
 
 Route::redirect('/ok', '/home');
 
-Route::get('/form', [FormController::class, 'form']);
-Route::get('/form', [FormController::class, 'submitForm' ]);
 

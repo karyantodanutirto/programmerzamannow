@@ -18,7 +18,7 @@ class FormController extends Controller
     {
         $name = $request->input("name");
         return response()->view("hello", [
-            "name" => $name
+            "nama" => $name
         ]);
     }
 }
