@@ -22,13 +22,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/home",[HomeController::class,"index"]);
+// Route::get("/home",[HomeController::class,"index"]);
 
-Route::fallback(function(){
-    return "Kamu salah ketik URL";
-});
+// Route::fallback(function(){
+//     return "Kamu salah ketik URL";
+// });
 
-Route::redirect('/ok', '/home');
+// Route::redirect('/ok', '/home');
 
+Route::get('/form', [FormController::class, 'form']);
 Route::get('/form', [FormController::class, 'submitForm' ]);
 
